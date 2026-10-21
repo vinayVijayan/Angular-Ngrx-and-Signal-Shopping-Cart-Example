@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { Ngconentex } from '../ngconentex/ngconentex';
-import { CartService, Product } from '../services/cart.services';
+import {  Product } from '../services/cart.services';
 import { Store } from '@ngrx/store';
 import { selectCartItems, selectTotalCount, selectTotalPrice } from '../services/cart.selectors';
 import { addToCart, clearCart } from '../services/cart.actions';
@@ -30,7 +30,6 @@ this.store.dispatch(addToCart({ product }));
 }
 
  clearAll() {
-    // Dispatch the clear action
     this.store.dispatch(clearCart());
   }
 }
